@@ -5,6 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Java 调试活动文件",
+            "request": "launch",
+            "mainClass": "${fileBasenameNoExtension}",
+            "projectName": "leetcode_82b2974e",
+            "args": [],
+            "stopOnEntry": false,
+            "console": "externalTerminal"
+        },
+        {
             "name": "C/C++: g++.exe 调试活动文件",
             "type": "cppdbg",
             "request": "launch",
