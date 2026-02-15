@@ -9,7 +9,7 @@ public:
         int non_zero = 0;
         while (true)
         {
-            while (zero < nums.size() && nums[zero] != 0) // zero==non_zero是非法的
+            while (zero < nums.size() && nums[zero] != 0)
             {
                 zero++;
             }
