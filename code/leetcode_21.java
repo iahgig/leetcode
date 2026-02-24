@@ -1,5 +1,5 @@
 public class leetcode_21 {
-    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {// 维护新链表head，tail，不断取两个链表的较小节点插入到tail，并移动相应指针
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {// 额外添加一个节点prehead，避免复杂的判空逻辑，维护新链表tail，不断取两个链表的较小节点插入到tail，并移动相应指针
         ListNode prehead = new ListNode(-1);
         ListNode tail = prehead;
         ListNode p1 = list1;
