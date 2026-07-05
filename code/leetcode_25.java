@@ -1,29 +1,29 @@
 public class leetcode_25 {
     public ListNode reverseKGroup(ListNode head, int k) {
+        ListNode prehead = new ListNode(-1, head);
+        ListNode pretail = prehead;
         ListNode cur = head;
-        ListNode prehead = new ListNode(-1);
-        prehead.next = head;
-        ListNode pre_group = prehead;// pre_group是上一组的最后一个节点
-        int len = 0;
+        ListNode pre = null;
+        int n = 0;
         while (cur != null) {
-            len++;
+            n++;
             cur = cur.next;
         }
         cur = head;
-        while (len >= k) {
-            ListNode pre = null;
-            ListNode tail = cur;// tail是翻转后当前组的最后一个节点
+        while (n >= k) {
+            ListNode tail = cur;
             for (int i = 0; i < k; i++) {
-                ListNode cur_next = cur.next;
+                ListNode next = cur.next;
                 cur.next = pre;
                 pre = cur;
-                cur = cur_next;
+                cur = next;
             }
-            pre_group.next = pre;// pre是当前组头结点
-            pre_group = tail;
-            len -= k;
+            pretail.next = pre;
+            pretail = tail;
+            pre = null;
+            n -= k;
         }
-        pre_group.next = cur;
+        pretail.next = cur;
         return prehead.next;
     }
 }
