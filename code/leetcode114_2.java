@@ -1,4 +1,3 @@
-import java.util.Stack;
 
 public class leetcode114_2 {
     public void flatten(TreeNode root) {
