@@ -1,0 +1,14 @@
+{
+    "java.import.maven.enabled": false,
+    "java.import.gradle.enabled": false,
+    "java.configuration.updateBuildConfiguration": "disabled",
+    "java.configuration.detectJdksAtStart": false,
+
+    "java.import.exclusions": [
+        "**/target/**",
+        "**/out/**",
+        "**/.git/**"
+    ],
+
+    "java.jdt.ls.vmargs": "-Xms512m -Xmx2048m -XX:+UseG1GC"
+}
